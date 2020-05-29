@@ -21,10 +21,12 @@ body {
     display: flex;
     flex-flow: column;
     text-align: right;
-   padding: 10px;
+   padding: 5px;
    margin: auto;
    max-width: 500px;
-   border: 1px solid grey;
+   
+   border: 1px solid #84817a;
+
 }
 
 .flex-row {
@@ -48,11 +50,27 @@ body {
    
 }
 
-
+.double {
+    flex-basis: 50%;
+}
 
 .operator {
     color: white;
     
 }
+
+#displayNumber {
+    font-size: 2.5em;
+}
+
+.display {
+    padding: 0 20px;
+    margin: 5px 0;
+    border-bottom: 2px solid #bdc3c7;
+}
+
+
+
+
 
 
