@@ -17,17 +17,22 @@ body {
     clear: both;
 }
 
-.flex-coloumn {
+.flex-coloumn, .flex-history {
     display: flex;
     flex-flow: column;
-    text-align: right;
-   padding: 5px;
+   
+   
    margin: auto;
    max-width: 500px;
    
    border: 1px solid #84817a;
 
 }
+
+.flex-coloumn {
+    padding: 5px;
+}
+
 
 .flex-row {
     display: flex;
@@ -67,7 +72,44 @@ body {
     padding: 0 20px;
     margin: 5px 0;
     border-bottom: 2px solid #bdc3c7;
+    text-align: right;
 }
+
+
+.flex-history {
+    margin-top: 20px;
+   text-align: center;
+}
+
+th, td {
+    
+    padding: 10px;
+    margin: 0;
+}
+
+th {
+    background: -webkit-linear-gradient(top, #d1ccc0, #84817a);
+    
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #d1ccc0;
+ }
+
+ .riwayat {
+     text-align: center;
+     text-shadow: 2px 2px #d1ccc0;
+ }
+
+
+
+
+
 
 
 

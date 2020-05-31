@@ -51,24 +51,36 @@ function handleOperand(operand) {
         calculator.operator = operand;
         calculator.firstNumber = calculator.displayNumber;
     } else {
-        alert('eror handle');
+        alert('satu kali perhitungan. Silahkan tekan sama dengan atau clear');
     }
 }
 
 function calculate() {
     let result = 0;
     if (calculator.operator === "+") {
-        return calculator.displayNumber = Number(calculator.firstNumber) + Number(calculator.displayNumber);
+        result = Number(calculator.firstNumber) + Number(calculator.displayNumber);
     } else if (calculator.operator === "-") {
-        return calculator.displayNumber = Number(calculator.firstNumber) - Number(calculator.displayNumber);
+        result = Number(calculator.firstNumber) - Number(calculator.displayNumber);
     } else if (calculator.operator === "x") {
-        return calculator.displayNumber = Number(calculator.firstNumber) * Number(calculator.displayNumber);
+        result = Number(calculator.firstNumber) * Number(calculator.displayNumber);
     } else if (calculator.operator === "/") {
-        let result = Number(calculator.firstNumber) / Number(calculator.displayNumber);
-        return calculator.displayNumber = Math.round(result * 100) / 100;
+        let divide = Number(calculator.firstNumber) / Number(calculator.displayNumber);
+        result = Math.round(divide * 100) / 100;
     } else {
         alert('eror calculate');
     }
+
+    // objek untuk fungsi putHistory()
+    const history = {
+        firstNumber: calculator.firstNumber,
+        secondNumber: calculator.displayNumber,
+        operator: calculator.operator,
+        result: result
+    }
+
+    saveHistory(history);
+    calculator.displayNumber = result;
+    renderHistory();
 }
 
 const buttons = document.querySelectorAll('.number,.operator');
